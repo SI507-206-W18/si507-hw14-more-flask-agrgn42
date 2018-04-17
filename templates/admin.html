@@ -8,5 +8,11 @@
     <div class="entry">
         <p class="entrytext"> {{e['text']}} </p>
         <p class="metadata"> by {{e['author']}} on {{e['timestamp']}} </p>
+        <p class="id">{{e['id']}}</p>
+    	<form action="/deleteentry" method="POST">
+		    <input type='hidden' name='id' value={{e['id']}}>
+		    <input type='submit' value='X'>
+		</form>
+
     </div>
 {% endfor %}
